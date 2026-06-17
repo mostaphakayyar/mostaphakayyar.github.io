@@ -133,7 +133,7 @@
     margin-bottom: 2.5rem; line-height: 1.2;
   }
 
-  /* PUBLISHED APPS — 3 cards prominent */
+  /* PUBLISHED APPS — 4 cards */
   .apps-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -165,6 +165,7 @@
   .icon-green { background: #0ea47218; }
   .icon-blue { background: #2563eb18; }
   .icon-purple { background: #a855f718; }
+  .icon-orange { background: #f9731618; } /* Added Orange for 4th App */
   .app-badge {
     display: inline-flex; align-items: center; gap: 0.3rem;
     font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
@@ -302,7 +303,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-label">Logistics × AI × Data Science</div>
   <h1>
@@ -324,7 +324,7 @@
       <div class="stat-label">Years in Logistics</div>
     </div>
     <div>
-      <div class="stat-num">3</div>
+      <div class="stat-num">4</div>
       <div class="stat-label">Published Windows Apps</div>
     </div>
     <div>
@@ -338,13 +338,11 @@
   </div>
 </div>
 
-<!-- PUBLISHED APPS -->
 <section id="apps">
   <div class="section-label">Microsoft Store</div>
   <h2>Published Applications</h2>
   <div class="apps-grid">
 
-    <!-- LogiPredict -->
     <a class="app-card featured" href="https://apps.microsoft.com/detail/9PBLQP22W6QF?hl=en-us&gl=TR&ocid=pdpshare" target="_blank">
       <div class="app-icon icon-green">🧠</div>
       <div class="app-badge badge-featured">★ Flagship Project</div>
@@ -364,7 +362,6 @@
       <div class="app-link-hint">↗ Download free on Microsoft Store</div>
     </a>
 
-    <!-- Privacy Filter Pro -->
     <a class="app-card" href="https://apps.microsoft.com/detail/9NTJWJ3RGSNJ?hl=en-us&gl=TR&ocid=pdpshare" target="_blank">
       <div class="app-icon icon-blue">🔒</div>
       <div class="app-badge badge-live">Live · 124 installs</div>
@@ -382,7 +379,6 @@
       <div class="app-link-hint">↗ Download free on Microsoft Store</div>
     </a>
 
-    <!-- SnipText OCR -->
     <a class="app-card" href="https://apps.microsoft.com/detail/9NPG5DCPT386?hl=en-us&gl=TR&ocid=pdpshare" target="_blank" style="--accent-card:#a855f7">
       <div class="app-icon icon-purple">📋</div>
       <div class="app-badge badge-live">Live</div>
@@ -399,10 +395,24 @@
       <div class="app-link-hint" style="color:#a855f7">↗ Download free on Microsoft Store</div>
     </a>
 
+    <a class="app-card" href="https://apps.microsoft.com/detail/9N82247JF67B?hl=en-us&gl=TR&ocid=pdpshare" target="_blank" style="--accent-card:#f97316">
+      <div class="app-icon icon-orange">⏱️</div>
+      <div class="app-badge badge-live" style="background:#f9731618; color:#f97316">Live</div>
+      <div class="app-name">FocusLock</div>
+      <div class="app-desc">
+        Productivity utility built to track daily goals, lock out distractions, and manage deep work sessions efficiently.
+      </div>
+      <div class="app-tags">
+        <span class="tag">Focus</span>
+        <span class="tag">Windows</span>
+        <span class="tag">Productivity</span>
+      </div>
+      <div class="app-link-hint" style="color:#f97316">↗ Download free on Microsoft Store</div>
+    </a>
+
   </div>
 </section>
 
-<!-- OTHER PROJECTS -->
 <section id="projects">
   <div class="section-label">More Work</div>
   <h2>AI & Data Projects</h2>
@@ -446,7 +456,6 @@
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-label">Technical Stack</div>
   <h2>Skills & Tools</h2>
@@ -517,7 +526,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="contact-box">
     <div class="section-label" style="justify-content:center;display:flex">Open to Work</div>
