@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="light">
 <title>Mostapha Kayyar — Business Operations &amp; Digital Transformation</title>
 <meta name="description" content="Mostapha Kayyar: business operations and digital transformation. ERP implementation, Power BI dashboards, process digitization and AI-assisted automation. Arabic, English, French, Turkish. Based in Istanbul.">
 <meta property="og:title" content="Mostapha Kayyar — Business Operations & Digital Transformation">
@@ -17,25 +17,25 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg: #070b1f;
-    --ink: #f4f6ff;
-    --ink-2: rgba(236, 240, 255, 0.82);
-    --muted: rgba(228, 233, 255, 0.72);
-    --accent: #8fb0ff;
-    --accent-2: #d29bff;
-    --accent-3: #5ff2de;
-    --glass: linear-gradient(135deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.05) 55%, rgba(255,255,255,0.09) 100%), rgba(12, 16, 48, 0.32);
-    --glass-strong: rgba(255, 255, 255, 0.14);
-    --glass-border: rgba(255, 255, 255, 0.28);
-    --glass-edge: rgba(255, 255, 255, 0.14);
-    --shadow: 0 24px 60px rgba(0, 0, 20, 0.45), 0 4px 14px rgba(0, 0, 20, 0.25);
-    --highlight: inset 0 1px 1px rgba(255,255,255,0.55), inset 0 -1px 1px rgba(255,255,255,0.12), inset 0 0 24px rgba(255,255,255,0.06);
+    --bg: #eef0fb;
+    --ink: #0d1330;
+    --ink-2: rgba(16, 22, 56, 0.82);
+    --muted: rgba(20, 28, 70, 0.62);
+    --accent: #3157ff;
+    --accent-2: #1e3a8a;
+    --accent-3: #00a99a;
+    --glass: linear-gradient(135deg, rgba(255,255,255,0.30) 0%, rgba(255,255,255,0.06) 55%, rgba(255,255,255,0.16) 100%);
+    --glass-strong: rgba(255, 255, 255, 0.30);
+    --glass-border: rgba(255, 255, 255, 0.55);
+    --glass-edge: rgba(255, 255, 255, 0.4);
+    --shadow: 0 20px 50px rgba(40, 50, 120, 0.18), 0 3px 10px rgba(40, 50, 120, 0.08);
+    --highlight: inset 0 1px 1px rgba(255,255,255,0.95), inset 0 -1px 1px rgba(255,255,255,0.35), inset 0 0 22px rgba(255,255,255,0.18);
     --radius: 28px;
   }
   html { scroll-behavior: smooth; }
   body {
     font-family: 'Manrope', system-ui, sans-serif;
-    background: radial-gradient(1200px 800px at 10% -10%, #1b2a8f 0%, transparent 60%), radial-gradient(1000px 700px at 110% 20%, #5a1a9e 0%, transparent 55%), radial-gradient(900px 700px at 40% 120%, #00706a 0%, transparent 60%), var(--bg);
+    background: radial-gradient(1100px 700px at 0% 0%, #aebfff 0%, transparent 60%), radial-gradient(900px 700px at 100% 30%, #c7cedb 0%, transparent 60%), radial-gradient(900px 700px at 40% 110%, #b4ece4 0%, transparent 60%), linear-gradient(160deg, #dde3f3, #e9ecf2 50%, #e0f0ee);
     background-attachment: fixed;
     color: var(--ink);
     line-height: 1.6;
@@ -48,13 +48,15 @@
   .liquid { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
   .blob {
     position: absolute; border-radius: 50%;
-    filter: blur(50px); opacity: 0.85;
+    filter: blur(60px); opacity: 0.7;
     animation: drift 18s ease-in-out infinite alternate;
   }
-  .b1 { width: 42vw; height: 42vw; background: radial-gradient(circle at 30% 30%, #4d7cff, #2337d6 70%); top: -8vw; left: -8vw; }
-  .b2 { width: 36vw; height: 36vw; background: radial-gradient(circle at 30% 30%, #e05fff, #6a2be2 70%); opacity: 0.7; top: 22vh; right: -8vw; animation-delay: -5s; }
-  .b3 { width: 34vw; height: 34vw; background: radial-gradient(circle at 30% 30%, #36f5d8, #0a9b8f 70%); bottom: -8vw; left: 22vw; animation-delay: -10s; }
-  .b4 { width: 22vw; height: 22vw; background: radial-gradient(circle at 30% 30%, #ffb347, #ff5e3a 70%); top: 58vh; left: -4vw; animation-delay: -14s; }
+  .b1 { width: 42vw; height: 42vw; background: radial-gradient(circle at 30% 30%, #6f97ff, #3b5bff 70%); top: -8vw; left: -8vw; }
+  .b2 { width: 36vw; height: 36vw; background: radial-gradient(circle at 30% 30%, #c3cad8, #8893a8 70%); top: 22vh; right: -8vw; animation-delay: -5s; }
+  .b3 { width: 34vw; height: 34vw; background: radial-gradient(circle at 30% 30%, #8ee8da, #3fb8ab 70%); bottom: -8vw; left: 22vw; animation-delay: -10s; }
+  .b4 { width: 22vw; height: 22vw; background: radial-gradient(circle at 30% 30%, #d3d8e2, #9aa3b5 70%); top: 58vh; left: -4vw; animation-delay: -14s; }
+  .b5 { width: 28vw; height: 28vw; background: radial-gradient(circle at 30% 30%, #8fa8ff, #5b6dff 70%); top: 40vh; left: 38vw; opacity: 0.45; animation-delay: -8s; }
+  .b6 { width: 26vw; height: 26vw; background: radial-gradient(circle at 30% 30%, #b9c1cf, #7d889c 70%); bottom: -6vw; right: 6vw; opacity: 0.5; animation-delay: -3s; }
   @keyframes drift {
     0%   { transform: translate(0, 0) scale(1); }
     50%  { transform: translate(8vw, -6vw) scale(1.15); }
@@ -71,8 +73,8 @@
     background: var(--glass);
     border: 1px solid var(--glass-border);
     box-shadow: var(--shadow), var(--highlight);
-    backdrop-filter: blur(26px) saturate(190%) brightness(1.08);
-    -webkit-backdrop-filter: blur(26px) saturate(190%) brightness(1.08);
+    backdrop-filter: blur(18px) saturate(180%) brightness(1.03);
+    -webkit-backdrop-filter: blur(18px) saturate(180%) brightness(1.03);
     border-radius: var(--radius);
     position: relative;
     isolation: isolate;
@@ -81,7 +83,7 @@
   .glass::before {
     content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1;
     background:
-      radial-gradient(120% 60% at 0% 0%, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0) 45%),
+      radial-gradient(120% 60% at 0% 0%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 45%),
       radial-gradient(80% 50% at 100% 100%, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 60%);
   }
   /* glossy rim: bright on the top-left edge, fading around */
@@ -113,8 +115,8 @@
   .nav-links a:hover { background: var(--glass-strong); color: var(--ink); }
   .nav-cta {
     padding: 9px 18px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 0.86rem;
-    color: #0b0f2a; background: linear-gradient(135deg, #ffffff, #dfe6ff);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.9);
+    color: #fff; background: linear-gradient(135deg, #3157ff, #1e3a8a);
+    box-shadow: 0 6px 18px rgba(30,58,138,0.35), inset 0 1px 0 rgba(255,255,255,0.45);
   }
 
   /* Hero */
@@ -145,13 +147,13 @@
     transition: transform 0.15s, box-shadow 0.2s;
   }
   .btn:hover { transform: translateY(-1px); }
-  .btn-solid { color: #0b0f2a; background: linear-gradient(135deg, #ffffff, #dfe6ff); box-shadow: 0 10px 28px rgba(0,0,0,0.35), inset 0 1px 0 #fff; }
-  .btn-glass { color: var(--ink); background: var(--glass-strong); border: 1px solid var(--glass-border); box-shadow: var(--highlight); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  .btn-solid { color: #fff; background: linear-gradient(135deg, #3157ff, #1e3a8a); box-shadow: 0 10px 26px rgba(30,58,138,0.35), inset 0 1px 0 rgba(255,255,255,0.45); }
+  .btn-glass { color: var(--ink); background: rgba(255,255,255,0.35); border: 1px solid rgba(255,255,255,0.8); box-shadow: var(--highlight); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
 
   .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   .stat { padding: 26px 22px; display: flex; flex-direction: column; justify-content: center; }
   .stat-num { font-size: 2.6rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
-  .stat-num.g { color: #fff; text-shadow: 0 0 24px rgba(143,176,255,0.6); }
+  .stat-num.g { background: linear-gradient(135deg, #3157ff, #1e3a8a); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .stat-label { margin-top: 8px; font-size: 0.82rem; color: var(--muted); font-weight: 600; }
 
   /* Sections */
@@ -166,7 +168,7 @@
   .card:hover { transform: translateY(-3px); }
   .card-tag {
     display: inline-block; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
-    color: #fff; background: rgba(255,255,255,0.16); border: 1px solid var(--glass-border);
+    color: var(--accent); background: rgba(255,255,255,0.45); border: 1px solid var(--glass-border);
     padding: 4px 10px; border-radius: 999px; margin-bottom: 14px;
   }
   .card h3 { font-size: 1.12rem; letter-spacing: -0.01em; margin-bottom: 8px; font-weight: 800; }
@@ -187,7 +189,7 @@
   .job-org { font-size: 0.9rem; font-weight: 700; margin-top: 4px; }
   .job-loc { font-size: 0.82rem; color: var(--muted); }
   .job h3 { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; }
-  .job h3 .tag { font-size: 0.7rem; vertical-align: middle; margin-left: 8px; padding: 3px 9px; border-radius: 999px; background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35); color: #fff; letter-spacing: 0.06em; text-transform: uppercase; }
+  .job h3 .tag { font-size: 0.7rem; vertical-align: middle; margin-left: 8px; padding: 3px 9px; border-radius: 999px; background: linear-gradient(135deg, #3157ff, #1e3a8a); color: #fff; letter-spacing: 0.06em; text-transform: uppercase; }
   .job ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
   .job li { font-size: 0.93rem; color: var(--ink-2); padding-left: 18px; position: relative; }
   .job li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 7px; height: 7px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-3)); }
@@ -239,7 +241,7 @@
 <body>
 
 <div class="liquid" aria-hidden="true">
-  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div>
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div><div class="blob b5"></div><div class="blob b6"></div>
   <div class="grain"></div>
 </div>
 
