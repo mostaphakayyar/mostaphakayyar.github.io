@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mostapha Kayyar — Business Operations &amp; Digital Transformation</title>
+<meta name="description" content="Mostapha Kayyar: business operations and digital transformation. ERP implementation, Power BI dashboards, process digitization and AI-assisted automation. Arabic, English, French, Turkish. Based in Istanbul.">
+<meta property="og:title" content="Mostapha Kayyar — Business Operations & Digital Transformation">
+<meta property="og:description" content="ERP implementation, KPI dashboards, process digitization and AI-assisted automation. Based in Istanbul, open to Lebanon, the Gulf and remote.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mostaphakayyar.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #eef1f7;
+    --ink: #0e1424;
+    --ink-2: #39415a;
+    --muted: #6b7390;
+    --accent: #2f5bff;
+    --accent-2: #7a4dff;
+    --accent-3: #00b3a4;
+    --glass: rgba(255, 255, 255, 0.46);
+    --glass-strong: rgba(255, 255, 255, 0.62);
+    --glass-border: rgba(255, 255, 255, 0.75);
+    --glass-edge: rgba(14, 20, 36, 0.08);
+    --shadow: 0 10px 40px rgba(30, 40, 80, 0.12), 0 2px 6px rgba(30, 40, 80, 0.06);
+    --highlight: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+    --blob-1: #7aa2ff;
+    --blob-2: #b28cff;
+    --blob-3: #5fe0d0;
+    --blob-4: #ffb38a;
+    --radius: 26px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #070a14;
+      --ink: #eef2ff;
+      --ink-2: #c5cbe3;
+      --muted: #8d95b3;
+      --accent: #7c9bff;
+      --accent-2: #b394ff;
+      --accent-3: #4fe3d2;
+      --glass: rgba(255, 255, 255, 0.06);
+      --glass-strong: rgba(255, 255, 255, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.16);
+      --glass-edge: rgba(255, 255, 255, 0.06);
+      --shadow: 0 10px 50px rgba(0, 0, 0, 0.45);
+      --highlight: inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 -1px 0 rgba(255, 255, 255, 0.04);
+      --blob-1: #2f4cff;
+      --blob-2: #6a35ff;
+      --blob-3: #00a896;
+      --blob-4: #ff6a3d;
+    }
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Manrope', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Liquid background */
+  .liquid { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+  .blob {
+    position: absolute; border-radius: 50%;
+    filter: blur(70px); opacity: 0.55;
+    animation: drift 26s ease-in-out infinite alternate;
+  }
+  .b1 { width: 48vw; height: 48vw; background: var(--blob-1); top: -12vw; left: -10vw; }
+  .b2 { width: 40vw; height: 40vw; background: var(--blob-2); top: 20vh; right: -12vw; animation-delay: -6s; }
+  .b3 { width: 36vw; height: 36vw; background: var(--blob-3); bottom: -10vw; left: 18vw; animation-delay: -12s; }
+  .b4 { width: 24vw; height: 24vw; background: var(--blob-4); top: 55vh; left: -6vw; opacity: 0.35; animation-delay: -18s; }
+  @keyframes drift {
+    0%   { transform: translate(0, 0) scale(1); }
+    50%  { transform: translate(4vw, -3vw) scale(1.08); }
+    100% { transform: translate(-3vw, 4vw) scale(0.96); }
+  }
+  .grain {
+    position: absolute; inset: 0; opacity: 0.05; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  @media (prefers-reduced-motion: reduce) { .blob { animation: none; } html { scroll-behavior: auto; } }
+
+  /* Glass primitive */
+  .glass {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow), var(--highlight);
+    backdrop-filter: blur(22px) saturate(170%);
+    -webkit-backdrop-filter: blur(22px) saturate(170%);
+    border-radius: var(--radius);
+    position: relative;
+  }
+  .glass::before {
+    content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    background: linear-gradient(140deg, rgba(255,255,255,0.35), rgba(255,255,255,0) 38%);
+    opacity: 0.6;
+  }
+  @media (prefers-color-scheme: dark) { .glass::before { opacity: 0.18; } }
+
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  nav.bar {
+    position: sticky; top: 14px; z-index: 50;
+    margin: 14px auto 0; max-width: 1160px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 12px 10px 22px; border-radius: 999px;
+  }
+  .logo { font-weight: 800; letter-spacing: -0.02em; font-size: 1.02rem; text-decoration: none; color: var(--ink); }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 4px; list-style: none; }
+  .nav-links a {
+    display: block; padding: 8px 14px; border-radius: 999px;
+    text-decoration: none; color: var(--ink-2); font-size: 0.88rem; font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-links a:hover { background: var(--glass-strong); color: var(--ink); }
+  .nav-cta {
+    padding: 9px 18px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 0.86rem;
+    color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 6px 18px rgba(47, 91, 255, 0.35), inset 0 1px 0 rgba(255,255,255,0.35);
+  }
+
+  /* Hero */
+  .hero { padding: 72px 0 40px; }
+  .hero-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 24px; align-items: stretch; }
+  .hero-main { padding: 48px; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px; border-radius: 999px; font-size: 0.78rem; font-weight: 700;
+    background: var(--glass-strong); border: 1px solid var(--glass-border); color: var(--ink-2);
+  }
+  .pill .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,0.2); }
+  h1 {
+    font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.02; letter-spacing: -0.035em;
+    font-weight: 800; margin: 22px 0 14px;
+  }
+  h1 em {
+    font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em;
+    background: linear-gradient(120deg, var(--accent), var(--accent-2) 55%, var(--accent-3));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .role { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+  .lead { font-size: 1.08rem; color: var(--ink-2); max-width: 600px; }
+  .lead strong { color: var(--ink); }
+  .ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  .btn {
+    padding: 13px 24px; border-radius: 999px; font-weight: 700; font-size: 0.92rem; text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.2s;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-solid { color: #fff; background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 10px 24px rgba(47,91,255,0.35), inset 0 1px 0 rgba(255,255,255,0.35); }
+  .btn-glass { color: var(--ink); background: var(--glass-strong); border: 1px solid var(--glass-border); box-shadow: var(--highlight); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat { padding: 26px 22px; display: flex; flex-direction: column; justify-content: center; }
+  .stat-num { font-size: 2.6rem; font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+  .stat-num.g { background: linear-gradient(135deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .stat-label { margin-top: 8px; font-size: 0.82rem; color: var(--muted); font-weight: 600; }
+
+  /* Sections */
+  section.block { padding: 56px 0; }
+  .eyebrow { font-size: 0.76rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+  h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); letter-spacing: -0.03em; line-height: 1.1; margin: 8px 0 28px; font-weight: 800; }
+  h2 em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; }
+
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .card { padding: 26px; transition: transform 0.25s, box-shadow 0.25s; }
+  .card:hover { transform: translateY(-3px); }
+  .card-tag {
+    display: inline-block; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--accent); background: var(--glass-strong); border: 1px solid var(--glass-border);
+    padding: 4px 10px; border-radius: 999px; margin-bottom: 14px;
+  }
+  .card h3 { font-size: 1.12rem; letter-spacing: -0.01em; margin-bottom: 8px; font-weight: 800; }
+  .card p { font-size: 0.93rem; color: var(--ink-2); }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+  .chip { font-size: 0.74rem; font-weight: 700; color: var(--ink-2); padding: 4px 10px; border-radius: 999px; background: var(--glass-strong); border: 1px solid var(--glass-edge); }
+
+  .feature { grid-column: 1 / -1; padding: 34px; display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 24px; align-items: center; }
+  .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .metric { padding: 18px; text-align: center; border-radius: 18px; background: var(--glass-strong); border: 1px solid var(--glass-border); box-shadow: var(--highlight); }
+  .metric b { display: block; font-size: 1.7rem; letter-spacing: -0.03em; }
+  .metric span { font-size: 0.74rem; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* Timeline */
+  .timeline { display: flex; flex-direction: column; gap: 14px; }
+  .job { padding: 26px 28px; display: grid; grid-template-columns: 210px 1fr; gap: 24px; }
+  .job-when { font-size: 0.84rem; font-weight: 800; color: var(--accent); }
+  .job-org { font-size: 0.9rem; font-weight: 700; margin-top: 4px; }
+  .job-loc { font-size: 0.82rem; color: var(--muted); }
+  .job h3 { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; }
+  .job h3 .tag { font-size: 0.7rem; vertical-align: middle; margin-left: 8px; padding: 3px 9px; border-radius: 999px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; letter-spacing: 0.06em; text-transform: uppercase; }
+  .job ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+  .job li { font-size: 0.93rem; color: var(--ink-2); padding-left: 18px; position: relative; }
+  .job li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 7px; height: 7px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-3)); }
+
+  /* Skills */
+  .skill-card h3 { margin-bottom: 14px; }
+  .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .skill-list span { font-size: 0.86rem; font-weight: 600; padding: 7px 13px; border-radius: 999px; background: var(--glass-strong); border: 1px solid var(--glass-border); box-shadow: var(--highlight); }
+
+  /* Edu / langs */
+  .edu h3 { font-size: 1.02rem; }
+  .edu .when { font-size: 0.8rem; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
+  .langs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 18px; }
+  .lang { padding: 18px; text-align: center; }
+  .lang b { display: block; font-size: 1.05rem; }
+  .lang span { font-size: 0.76rem; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+  .certs { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; margin-top: 6px; }
+  .certs li { font-size: 0.9rem; color: var(--ink-2); padding-left: 16px; position: relative; }
+  .certs li::before { content: '✓'; position: absolute; left: 0; color: var(--accent-3); font-weight: 800; }
+
+  /* Contact */
+  .contact { padding: 56px 40px; text-align: center; margin: 24px 0 40px; }
+  .contact h2 { margin-bottom: 12px; }
+  .contact p { color: var(--ink-2); max-width: 560px; margin: 0 auto 26px; }
+  .contact .ctas { justify-content: center; }
+  .mail { margin-top: 18px; font-size: 0.92rem; color: var(--muted); }
+  .mail a { color: var(--accent); font-weight: 700; text-decoration: none; }
+
+  footer { text-align: center; padding: 0 0 36px; font-size: 0.82rem; color: var(--muted); }
+
+  /* Responsive */
+  @media (max-width: 960px) {
+    .hero-grid, .feature { grid-template-columns: 1fr; }
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+    .langs { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 680px) {
+    nav.bar { margin: 10px 12px 0; }
+    .nav-links { display: none; }
+    .hero { padding: 40px 0 24px; }
+    .hero-main { padding: 30px 22px; }
+    .grid-3, .grid-2, .certs { grid-template-columns: 1fr; }
+    .job { grid-template-columns: 1fr; gap: 10px; padding: 22px; }
+    .contact { padding: 40px 22px; }
+    .wrap { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="liquid" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div>
+  <div class="grain"></div>
+</div>
+
+<nav class="bar glass">
+  <a class="logo" href="#top">Mostapha <span>Kayyar</span></a>
+  <ul class="nav-links">
+    <li><a href="#highlights">Highlights</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Contact</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-main glass">
+      <span class="pill"><span class="dot"></span>Open to opportunities</span>
+      <h1>Systems instead<br>of <em>spreadsheets.</em></h1>
+      <div class="role">Mostapha Kayyar · Business Operations &amp; Digital Transformation</div>
+      <p class="lead">I help businesses digitize how they work: <strong>ERP implementation, KPI dashboards, process digitization and AI-assisted automation</strong>. 14 years across operations, retail and reporting in Lebanon, West Africa and Turkey. Based in Istanbul, open to Lebanon, the Gulf and remote.</p>
+      <div class="ctas">
+        <a class="btn btn-solid" href="#contact">Get in touch</a>
+        <a class="btn btn-glass" href="#projects">See projects</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat glass"><div class="stat-num g">14</div><div class="stat-label">Years of experience</div></div>
+      <div class="stat glass"><div class="stat-num">8</div><div class="stat-label">Years of reporting &amp; liaison</div></div>
+      <div class="stat glass"><div class="stat-num">2,000+</div><div class="stat-label">Installs across 4 published apps</div></div>
+      <div class="stat glass"><div class="stat-num g">4</div><div class="stat-label">Working languages</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="block" id="highlights">
+  <div class="wrap">
+    <div class="eyebrow">Highlights</div>
+    <h2>What I have <em>delivered</em></h2>
+    <div class="grid-3">
+      <div class="card glass">
+        <span class="card-tag">ERP</span>
+        <h3>Requirements to go-live</h3>
+        <p>Defined the requirements for a custom ERP and coordinated a local software firm through development, testing and go-live for a new retail store.</p>
+      </div>
+      <div class="card glass">
+        <span class="card-tag">Launch</span>
+        <h3>Store launched from scratch</h3>
+        <p>Took a multi-category store in Bamako from concept to opening: location, design, brand identity, and hiring and training the opening team.</p>
+      </div>
+      <div class="card glass">
+        <span class="card-tag">Reporting</span>
+        <h3>Weekly KPI dashboard</h3>
+        <p>Replaced PowerPoint reports for a Director General with a weekly dashboard covering fleet KPIs, fuel, deliveries, maintenance and export trips.</p>
+      </div>
+      <div class="card glass">
+        <span class="card-tag">CRM</span>
+        <h3>AI CRM &amp; website — Darkmen</h3>
+        <p>Translating business needs into requirements for the team building an AI-powered CRM platform and website for a wholesale fashion brand in Istanbul.</p>
+      </div>
+      <div class="card glass">
+        <span class="card-tag">Liaison</span>
+        <h3>8 years of reporting</h3>
+        <p>Investigation reports and analytical summaries for senior decision-makers, and coordination with embassies, NGOs and government bodies.</p>
+      </div>
+      <div class="card glass">
+        <span class="card-tag">Build</span>
+        <h3>Apps in production</h3>
+        <p>Four Windows apps published on the Microsoft Store, built and packaged myself, with 2,000+ installs combined.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="eyebrow">Career</div>
+    <h2>Professional <em>experience</em></h2>
+    <div class="timeline">
+
+      <article class="job glass">
+        <div><div class="job-when">Nov 2026 — Present</div><div class="job-org">Darkmen</div><div class="job-loc">Istanbul, Turkey</div></div>
+        <div>
+          <h3>AI CRM Platform &amp; Website <span class="tag">Project</span></h3>
+          <ul>
+            <li>Supporting a wholesale plus-size women's fashion brand (own factory, three Istanbul stores, international buyers) on its AI-powered CRM platform and website.</li>
+            <li>Translate business needs into requirements for an external development team in Morocco, and test new features before release.</li>
+            <li>Propose features and customer-facing content added to the platform and website, such as a five-step wholesale order guide covering sourcing, stores, ordering, payment and delivery.</li>
+            <li>Coach the online sales team on how to communicate with wholesale clients on WhatsApp, and propose content filming concepts.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job glass">
+        <div><div class="job-when">Aug 2026 — Oct 2026</div><div class="job-org">Twellium Industrial Company Limited</div><div class="job-loc">Sindia, Senegal</div></div>
+        <div>
+          <h3>Operations &amp; Reporting Supervisor, Transportation &amp; Fleet</h3>
+          <ul>
+            <li>Built a weekly KPI dashboard that replaced PowerPoint reports for the Director General, tracking fleet KPIs, fuel efficiency, deliveries, maintenance, accidents and export trips.</li>
+            <li>Ran transport operations for a 116-asset fleet (62 trucks) and about 105 staff, reporting to the Director General.</li>
+            <li>Tightened GPS and stock controls, with records kept in Excel and Dolphin ERP.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job glass">
+        <div><div class="job-when">Jun 2025 — Aug 2026</div><div class="job-org">Career transition</div><div class="job-loc">Lebanon</div></div>
+        <div>
+          <h3>AI &amp; Data Science Study and Projects</h3>
+          <ul>
+            <li>Completed the AUB Professional Graduate Diploma in AI &amp; Data Science (Oct 2025) and built the projects below.</li>
+            <li>A planned retail business launch in Lebanon was halted by the regional conflict.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job glass">
+        <div><div class="job-when">Apr 2024 — Jun 2025</div><div class="job-org">Badawistore Group</div><div class="job-loc">Bamako, Mali</div></div>
+        <div>
+          <h3>Operations Manager</h3>
+          <ul>
+            <li>Tracked sales by product, category and promotion, and reported results to the owner.</li>
+            <li>Supervised the warehouse manager and a 4-person sales team, including target-based bonuses.</li>
+            <li>Main point of contact for international suppliers in France and Indonesia, key clients and service providers.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job glass">
+        <div><div class="job-when">Sep 2022 — Apr 2024</div><div class="job-org">Badawistore Group</div><div class="job-loc">Bamako, Mali</div></div>
+        <div>
+          <h3>Project Manager, Outlet 223 Retail Store Launch</h3>
+          <ul>
+            <li>Defined requirements for a custom ERP system and coordinated a local software firm through development and go-live.</li>
+            <li>Took a new multi-category retail store from concept to opening: location, design, brand identity, and hiring and training the opening team.</li>
+            <li>Managed the store's Facebook page and campaigns, using the results to adjust content and offers.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job glass">
+        <div><div class="job-when">Jan 2021 — Sep 2022</div><div class="job-org">Badawistore Group</div><div class="job-loc">Bamako, Mali</div></div>
+        <div>
+          <h3>Sales Supervisor</h3>
+          <ul>
+            <li>Analyzed market trends and salesperson performance, and visited clients in the field.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job glass">
+        <div><div class="job-when">Mar 2012 — Dec 2020</div><div class="job-org">Lebanese Ministry of Defense</div><div class="job-loc">Lebanon</div></div>
+        <div>
+          <h3>Reporting &amp; Liaison Coordinator</h3>
+          <ul>
+            <li>Collected and analyzed information from multiple sources to produce investigation reports, dashboards and analytical summaries for senior decision-makers under strict deadlines.</li>
+            <li>Coordinated with embassies, NGOs and government bodies on permissions and flight clearances.</li>
+            <li>Maintained accuracy, confidentiality and documentation standards.</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="block" id="projects">
+  <div class="wrap">
+    <div class="eyebrow">Projects &amp; apps</div>
+    <h2>Things I have <em>built</em></h2>
+    <div class="grid-3">
+
+      <div class="card glass feature">
+        <div>
+          <span class="card-tag">Machine learning · Published app</span>
+          <h3 style="font-size:1.4rem">LogiPredict — Inventory Stockout Risk Monitor</h3>
+          <p>A LightGBM model that predicts which products are likely to run out of stock in the next 7 and 14 days, and explains each prediction in plain language with SHAP. Includes confidence flags, category risk summaries, reorder suggestions and one-click PDF export. Published on the Microsoft Store and runs fully offline.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">LightGBM</span><span class="chip">SHAP</span><span class="chip">Flet</span><span class="chip">ReportLab</span></div>
+        </div>
+        <div class="metrics">
+          <div class="metric"><b>0.790</b><span>F1 score</span></div>
+          <div class="metric"><b>0.898</b><span>ROC-AUC</span></div>
+          <div class="metric"><b>7–14</b><span>Day horizon</span></div>
+          <div class="metric"><b>100%</b><span>Offline</span></div>
+        </div>
+      </div>
+
+      <div class="card glass">
+        <span class="card-tag">Published app</span>
+        <h3>Privacy Filter Pro</h3>
+        <p>Hides sensitive screen content during calls and in open offices. My most-installed app on the Microsoft Store.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Windows</span><span class="chip">MSIX</span></div>
+      </div>
+      <div class="card glass">
+        <span class="card-tag">Published app</span>
+        <h3>SnipText OCR</h3>
+        <p>One-keystroke text extraction from any area of the screen, replacing a multi-step copy routine.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">OCR</span><span class="chip">PyInstaller</span></div>
+      </div>
+      <div class="card glass">
+        <span class="card-tag">Published app · AI</span>
+        <h3>FocusLock</h3>
+        <p>AI goal-planning app that turns a goal into a visual plan and a daily schedule, with a built-in focus timer.</p>
+        <div class="chips"><span class="chip">Flask</span><span class="chip">SQLite</span><span class="chip">Groq API</span></div>
+      </div>
+
+      <div class="card glass">
+        <span class="card-tag">Implementation</span>
+        <h3>ERP — Outlet 223</h3>
+        <p>Business requirements for a custom ERP (sales, stock, staff records), then coordination of the software firm through testing and go-live.</p>
+        <div class="chips"><span class="chip">Requirements</span><span class="chip">Testing</span><span class="chip">Go-live</span></div>
+      </div>
+      <div class="card glass">
+        <span class="card-tag">BI</span>
+        <h3>Power BI dashboards</h3>
+        <p>Operational dashboards for KPIs, inventory and performance, including a weekly management dashboard that replaced PowerPoint reporting.</p>
+        <div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Excel</span></div>
+      </div>
+      <div class="card glass">
+        <span class="card-tag">Data</span>
+        <h3>Lebanon property price predictor</h3>
+        <p>Python scraper (config, parser and scraper modules) that collected 5,388 Beirut and Zahle listings, with geocoding, for a price prediction model.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Scraping</span><span class="chip">Geocoding</span></div>
+      </div>
+
+      <div class="card glass">
+        <span class="card-tag">Learning project</span>
+        <h3>Arabic skincare chatbot</h3>
+        <p>Arabic-focused chatbot prototype built to learn how retrieval-augmented generation (RAG) works in practice.</p>
+        <div class="chips"><span class="chip">LLMs</span><span class="chip">Embeddings</span></div>
+      </div>
+      <div class="card glass">
+        <span class="card-tag">Prototype</span>
+        <h3>POS / CRM prototype</h3>
+        <p>Point-of-sale and customer management prototype, designed from hands-on FMCG retail experience to reduce manual data entry.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Gradio</span></div>
+      </div>
+      <div class="card glass">
+        <span class="card-tag">Learning project</span>
+        <h3>OpenAI chatbot</h3>
+        <p>Chatbot with conversation memory in two interfaces: a command-line version and a Streamlit web app.</p>
+        <div class="chips"><span class="chip">OpenAI API</span><span class="chip">Streamlit</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="block" id="skills">
+  <div class="wrap">
+    <div class="eyebrow">Skills</div>
+    <h2>What I bring to the <em>table</em></h2>
+    <div class="grid-2">
+      <div class="card glass skill-card"><h3>Operations</h3><div class="skill-list"><span>Daily operations management</span><span>Supplier &amp; client coordination</span><span>Sales &amp; performance tracking</span><span>Recruitment &amp; training</span><span>New store launch</span></div></div>
+      <div class="card glass skill-card"><h3>Systems &amp; digitization</h3><div class="skill-list"><span>ERP requirements &amp; go-live</span><span>CRM &amp; website requirements</span><span>User testing</span><span>Process mapping</span><span>Report automation</span></div></div>
+      <div class="card glass skill-card"><h3>Data &amp; BI</h3><div class="skill-list"><span>Power BI</span><span>Excel</span><span>SQL (MySQL)</span><span>Python &amp; pandas</span><span>KPI reporting</span></div></div>
+      <div class="card glass skill-card"><h3>AI &amp; building</h3><div class="skill-list"><span>Machine learning basics</span><span>LightGBM &amp; SHAP</span><span>LLM fundamentals</span><span>Flask</span><span>App packaging (MSIX)</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="education">
+  <div class="wrap">
+    <div class="eyebrow">Education &amp; languages</div>
+    <h2>Learning, <em>always</em></h2>
+    <div class="grid-2">
+      <div class="card glass edu">
+        <div class="when">Oct 2025</div>
+        <h3>Professional Graduate Diploma in AI &amp; Data Science</h3>
+        <p>American University of Beirut. Machine learning, deep learning, large language models, data science, business analytics, AI ethics.</p>
+      </div>
+      <div class="card glass edu">
+        <div class="when">2021</div>
+        <h3>Bachelor of Arts in Communication (Radio &amp; TV)</h3>
+        <p>Lebanese International University.</p>
+      </div>
+      <div class="card glass edu" style="grid-column: 1 / -1;">
+        <h3>Certifications</h3>
+        <ul class="certs">
+          <li>AI Foundations: Machine Learning — LinkedIn Learning (2026)</li>
+          <li>Data Science Essentials with Python — Cisco (2026)</li>
+          <li>Complete Python Mastery; Complete SQL Mastery — Code with Mosh (2025)</li>
+          <li>Introduction to Python for Developers — DataCamp (2025)</li>
+          <li>Digital Marketing Analytics — University of Maryland, edX (2024)</li>
+          <li>Duolingo English Test — CEFR B2 (2025)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="langs">
+      <div class="lang glass"><b>Arabic</b><span>Native</span></div>
+      <div class="lang glass"><b>English</b><span>Professional</span></div>
+      <div class="lang glass"><b>French</b><span>Professional</span></div>
+      <div class="lang glass"><b>Turkish</b><span>Intermediate</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="contact">
+  <div class="contact glass">
+    <div class="eyebrow">Let's talk</div>
+    <h2>Digitizing your <em>operations?</em></h2>
+    <p>Open to roles in operations analysis, ERP/CRM implementation and business intelligence. Based in Istanbul, available for Lebanon, the Gulf and remote.</p>
+    <div class="ctas">
+      <a class="btn btn-solid" href="mailto:kayyarmustafa@gmail.com">Email me</a>
+      <a class="btn btn-glass" href="https://www.linkedin.com/in/kayyarmostapha/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+    <div class="mail">kayyarmustafa@gmail.com</div>
+  </div>
+</section>
+
+</main>
+
+<footer>© 2026 Mostapha Kayyar</footer>
+
+</body>
+</html>
